@@ -1,0 +1,23 @@
+# API Keys and Secrets
+config.js
+.env
+*.env
+.env.*
+
+# Project specific files 
+weather-app/config.js
+salon-website/config.js
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Log files
+*.log
+npm-debug.log*
