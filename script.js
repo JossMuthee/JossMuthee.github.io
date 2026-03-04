@@ -86,3 +86,36 @@ if (heroSubtitle) {
 // Mobile menu toggle (if you want to add a hamburger menu later)
 // This is a placeholder for future enhancement
 console.log('Portfolio loaded successfully! 🦆');
+
+// Theme switcher
+const themes = {
+    sunset: {
+        primary: '#ff6b6b',
+        gradient: 'linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%)',
+        cardGradient: 'linear-gradient(135deg, #ff6b6b 0%, #ff9a9e 100%)'
+    },
+    ocean: {
+        primary: '#2c7da0',
+        gradient: 'linear-gradient(135deg, #89f7fe 0%, #66a6ff 100%)',
+        cardGradient: 'linear-gradient(135deg, #2c7da0 0%, #61a5c2 100%)'
+    },
+    galaxy: {
+        primary: '#7209b7',
+        gradient: 'linear-gradient(135deg, #0b0c10 0%, #1a1a2e 50%, #16213e 100%)',
+        cardGradient: 'linear-gradient(135deg, #7209b7 0%, #b5179e 100%)'
+    },
+    mint: {
+        primary: '#2ecc71',
+        gradient: 'linear-gradient(135deg, #a8e6cf 0%, #d4edda 100%)',
+        cardGradient: 'linear-gradient(135deg, #2ecc71 0%, #3498db 100%)'
+    }
+};
+
+document.querySelectorAll('.theme-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+        const theme = btn.getAttribute('data-theme');
+        document.body.style.background = themes[theme].gradient;
+        document.documentElement.style.setProperty('--primary', themes[theme].primary);
+        // Add more color changes as needed
+    });
+});

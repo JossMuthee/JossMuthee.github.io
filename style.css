@@ -549,3 +549,37 @@ h1, h2, h3, h4 {
 .about-content {
     animation: fadeIn 1s ease-out;
 }
+
+.theme-picker {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    gap: 8px;
+    background: white;
+    padding: 10px;
+    border-radius: 40px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    z-index: 1000;
+}
+
+.theme-btn {
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    background: white;
+}
+
+.theme-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.theme-btn[data-theme="sunset"] { background: linear-gradient(135deg, #ff6b6b, #ffe66d); }
+.theme-btn[data-theme="ocean"] { background: linear-gradient(135deg, #2c7da0, #a9d6e5); }
+.theme-btn[data-theme="galaxy"] { background: linear-gradient(135deg, #7209b7, #f72585); }
+.theme-btn[data-theme="mint"] { background: linear-gradient(135deg, #2ecc71, #3498db); }
